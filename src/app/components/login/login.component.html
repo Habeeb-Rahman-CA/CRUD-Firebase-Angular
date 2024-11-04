@@ -6,16 +6,24 @@
                 <div class="card-body">
                     <form>
                         <div class="mb-3">
-                          <label for="exampleInputEmail1" class="form-label">Email address</label>
-                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                          <label for="exampleInputEmail1" class="form-label">Email</label>
+                          <input type="email" class="form-control" [(ngModel)]="email">
                         </div>
                         <div class="mb-3">
                           <label for="exampleInputPassword1" class="form-label">Password</label>
-                          <input type="password" class="form-control" id="exampleInputPassword1">
+                          <input type="password" class="form-control" [(ngModel)]="password">
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="submit" class="btn btn-primary" (click)="login()">Login</button>
                       </form>
+                      <div class="row">
+                        <div class="col-6">
+                          <a routerLink="/register" style="text-decoration: none;">Need Account? <span class="text-dark">Register</span>
+                          </a>
+                        </div>
+                        <div class="col-6">
+                          <a href="" style="text-decoration: none;" class="text-dark">Forget Password?</a>
+                        </div>
+                      </div>
                 </div>
             </div>
         </div>
