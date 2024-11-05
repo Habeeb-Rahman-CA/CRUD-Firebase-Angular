@@ -1,0 +1,29 @@
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col"></div>
+        <div class="col-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <div class="mb-3">
+                        <h4>Forgot Password</h4>
+                    </div>
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" [(ngModel)]="email">
+                        </div>
+                        <button type="submit" class="btn btn-primary" (click)="forgotPassword()">Send</button>
+                    </form>
+                    <div class="row">
+                        <div class="col-6">
+                            <a routerLink="/login" style="text-decoration: none; color: black;">
+                                Back to <span class="text-primary">Login</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
