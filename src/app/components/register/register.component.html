@@ -5,7 +5,7 @@
             <div class="card shadow">
                 <div class="card-body">
                   <div class="mb-3">
-                    <h4>Register</h4>
+                    <h4 class="text-center fw-bold text-uppercase text-muted">Register</h4>
                   </div>
                     <form>
                         <div class="mb-3">
@@ -23,6 +23,15 @@
                           <a routerLink="/login" style="text-decoration: none;">Have an Account? <span class="text-dark">Login</span>
                           </a>
                         </div>
+                      </div>
+                      <div class="row mt-2">
+                        <a (click)="signInWithGoogle()" style="cursor: pointer;">
+                          <div class="card shadow text-center">
+                            <div class="card-body">
+                              <img src="google.png" height="24px" width="24px" class="mx-3">Sign In with Google
+                            </div>
+                          </div>
+                        </a>
                       </div>
                 </div>
             </div>

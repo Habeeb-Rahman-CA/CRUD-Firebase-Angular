@@ -73,11 +73,15 @@ export class DashboardComponent implements OnInit {
 
   deleteStudent(id: string) {
     if (window.confirm('Are you want to delete' + this.studentObj.firstName))
-    this.data.deleteStudent(id)
+      this.data.deleteStudent(id)
     this.getAllStudent()
   }
 
-  updateStudent() {
-
-  }
+  updateStudent(student: IStudent) {
+      this.id = student.id,
+      this.firstName = student.firstName,
+      this.lastName = student.lastName,
+      this.email = student.email,
+      this.mobile = student.mobile
+    }
 }
