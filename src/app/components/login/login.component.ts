@@ -31,4 +31,8 @@ export class LoginComponent {
     this.email = ''
     this.password = ''
   }
+
+  signInWithGoogle(){
+    this.auth.signInWithGoogle()
+  }
 }

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signOut } from 'firebase/auth'
-import { auth } from '../config/firebase';
+import { createUserWithEmailAndPassword, sendEmailVerification, sendPasswordResetEmail, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
+import { auth, googleProvider } from '../config/firebase';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -57,6 +57,15 @@ export class AuthService {
       this.router.navigate(['varify-email'])
     }, (err: any) => {
       alert("Not able to sent the mail to your mail")
+    })
+  }
+
+  signInWithGoogle(){
+    return signInWithPopup(auth, googleProvider).then((res) =>{
+      this.router.navigate(['dashboard'])
+      localStorage.setItem('token', JSON.stringify(res.user?.uid))
+    }, err =>{
+      alert(err.message)
     })
   }
 
