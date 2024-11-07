@@ -29,7 +29,9 @@ export class DataService {
   }
 
   updateStudent(id : string, student: Partial<IStudent>){
-    const  studentDocRef = doc(this.studentRef, id)
+    const studentDocRef = doc(this.studentRef, id)
+    this.deleteStudent(id)
     return updateDoc(studentDocRef, student)
+    
   }
 }

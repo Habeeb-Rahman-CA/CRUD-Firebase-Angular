@@ -78,10 +78,12 @@ export class DashboardComponent implements OnInit {
   }
 
   updateStudent(student: IStudent) {
-      this.id = student.id,
-      this.firstName = student.firstName,
-      this.lastName = student.lastName,
-      this.email = student.email,
-      this.mobile = student.mobile
-    }
+    this.firstName = student.firstName,
+    this.lastName = student.lastName,
+    this.email = student.email,
+    this.mobile = student.mobile
+
+    this.data.updateStudent(student.id, student)
+  }
+
 }
